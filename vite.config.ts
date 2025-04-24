@@ -6,7 +6,10 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 // https://vite.dev/config/
 export default defineConfig({
   base: '/',
-  plugins: [vue(), vueJsx(), vueDevTools()],
+  build: {
+    outDir: 'dist',
+  },
+  plugins: [vue(), vueJsx(), ...(process.env.NODE_ENV === 'development' ? [vueDevTools()] : [])],
   resolve: {
     alias: {
       '@': '/src',

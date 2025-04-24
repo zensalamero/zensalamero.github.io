@@ -34,3 +34,6 @@ coverage
 .yarnrc
 yarn.lock
 install-state.gz
+
+.env
+.env.prod
