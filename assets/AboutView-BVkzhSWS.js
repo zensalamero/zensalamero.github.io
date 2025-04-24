@@ -1,1 +1,0 @@
-import{_ as o,c as s,a as t,o as a}from"./index-BVrVlmIi.js";const r={},i={class:"about"};function n(c,e){return a(),s("div",i,e[0]||(e[0]=[t("h1",null,"This is an about page",-1)]))}const u=o(r,[["render",n],["__file","C:/workdir/zensalamero.github.io/src/views/AboutView.vue"]]);export{u as default};
