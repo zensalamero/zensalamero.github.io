@@ -28,3 +28,9 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+.yarn/
+.yarnrc.yml
+.yarnrc
+yarn.lock
+install-state.gz
