@@ -1,3 +1,4 @@
+import 'vite-ssg'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
@@ -9,6 +10,10 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
+  ssgOptions: {
+    script: 'async',
+    formatting: 'minify',
+  },
   plugins: [
     vue(),
     ...(process.env.NODE_ENV === 'development' ? [vueDevTools()] : []),
@@ -19,6 +24,7 @@ export default defineConfig({
       },
     },
   ],
+
   resolve: {
     alias: {
       '@': '/src',
