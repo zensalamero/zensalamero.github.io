@@ -6,7 +6,7 @@ import { writeFileSync } from 'fs'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/zensalamero.github.io/', // this is needed only if you're deploying to GitHub Pages repo path
+  base: '/', // this is needed only if you're deploying to GitHub Pages repo path
   build: {
     outDir: 'dist',
   },
