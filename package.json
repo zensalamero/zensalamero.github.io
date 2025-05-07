@@ -11,8 +11,8 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "pnpm run _deploy",
-    "_deploy": "pnpm build && gh-pages -d dist"
+    "d": "pnpm run deploy",
+    "deploy": "pnpm build && gh-pages -d dist"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.1",
