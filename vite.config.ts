@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { writeFileSync } from 'fs'
 
@@ -12,7 +11,6 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    vueJsx(),
     ...(process.env.NODE_ENV === 'development' ? [vueDevTools()] : []),
     {
       name: 'write-cname',
