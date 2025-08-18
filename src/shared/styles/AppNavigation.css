@@ -1,0 +1,22 @@
+nav a.router-link-exact-active {
+  color: var(--color-accent-100);
+  border-color: var(--color-accent-100);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+}
