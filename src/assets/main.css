@@ -1,10 +1,10 @@
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Courier+Prime:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Courier+Prime:wght@400;700&display=swap&family=Kode+Mono');
 
 @plugin "@tailwindcss/forms";
 
 @theme {
-  --color-brand: oklch(79.762% 0.12582 204.075);
+  --color-brand: #35d4e2;
   --color-language: oklch(0.2768 0 0);
 
   --color-accent-50: oklch(84.346% 0.0452 201.723);
@@ -13,14 +13,14 @@
   --color-accent-200: oklch(66.328% 0.09509 204.154);
   --color-accent-300: oklch(0.527 0.088 205);
 
-  --color-foreground: oklch(0.2768 0 0);
+  --color-foreground: #282828;
   --color-foreground-50: oklch(30.919% 0.00004 271.152);
   --color-foreground-100: oklch(0.3562 0 0);
   --color-foreground-200: oklch(74.763% 0.00008 271.152);
 
   --color-background: oklch(94.007% 0.00011 271.152);
-  --color-background-50: oklch(94.007% 0.00011 271.152);
-  --color-background-100: oklch(87.917% 0.0001 271.152);
+  --color-background-50: oklch(90.67% 0.0001 271.152);
+  --color-background-100: oklch(83.28% 0.00009 271.152);
   --color-background-300: oklch(74.443% 0.00008 271.152);
 
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
@@ -28,15 +28,16 @@
 
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'Courier Prime', ui-monospace, monospace;
+  --font-mono-xtra: 'Kode Mono', ui-monospace, monospace;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 html.dark {
   --color-brand: oklch(0.527 0.088 205);
-  --color-language: oklch(97.015% 0.00011 271.152);
+  --color-language: #f5f5f5;
 
-  --color-background: oklch(0.2768 0 0);
+  --color-background: hsl(0, 0%, 16%);
   --color-background-50: oklch(30.919% 0.00004 271.152);
   --color-background-100: oklch(0.3562 0 0);
   --color-background-200: oklch(74.763% 0.00008 271.152);

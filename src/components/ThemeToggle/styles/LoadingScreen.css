@@ -1,0 +1,64 @@
+/* Fade in animation for main app */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress bar shimmer animation */
+.animate-shimmer {
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+/* Tabular numbers for consistent spacing */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Enhanced progress bar styling */
+.progress-glow {
+  box-shadow: 0 0 20px rgba(var(--color-accent), 0.4);
+}
+
+/* Loading screen backdrop blur effect */
+.loading-backdrop {
+  backdrop-filter: blur(8px);
+  background: rgba(var(--color-background), 0.95);
+}
+
+/* Smooth progress transitions */
+.progress-transition {
+  transition: width 0.1s ease-out;
+}
+
+/* Step indicator animations */
+.step-indicator {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-indicator.active {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(var(--color-accent), 0.6);
+}
+
+.percentage {
+  font-family: var(--font-mono-xtra);
+}
