@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { FileTreeItemWithDepth } from '@/shared/interfaces/FileTreeItem'
 import { useFileTree } from '@/shared/utils/useFileTree'
+import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/vue/16/solid'
 
 const { getFileIcon } = useFileTree()
 
