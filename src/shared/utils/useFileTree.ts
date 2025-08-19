@@ -1,6 +1,6 @@
-import { ref, computed } from 'vue'
-import type { FileTreeItem } from '../interfaces/FileTreeItem'
-import { FILE_TREE_CONFIG } from '../constants/fileTree'
+import { ref, computed, ComputedRef } from 'vue'
+import type { FileTreeItem, FileTreeItemWithDepth } from '../interfaces/FileTreeItem'
+import { FILE_TREE_CONFIG } from '../constants/FILE_TREE'
 import TailwindIcon from '@/assets/icons/TailwindIcon.vue'
 import VueIcon from '@/assets/icons/VueIcon.vue'
 import TypescriptIcon from '@/assets/icons/TypescriptIcon.vue'
@@ -12,13 +12,7 @@ import {
   PhotoIcon,
   BookOpenIcon,
 } from '@heroicons/vue/24/solid'
-
-interface OpenFile {
-  path: string
-  name: string
-  icon: string | object
-  iconType?: 'emoji' | 'component'
-}
+import { OpenFile } from '../constants/NAV_FILE'
 
 export function useFileTree() {
   const fileTree = ref<FileTreeItem[]>(JSON.parse(JSON.stringify(FILE_TREE_CONFIG)))
@@ -146,7 +140,7 @@ export function useFileTree() {
     }
   }
 
-  const flattenedFiles = computed(() => {
+  const flattenedFiles: ComputedRef<FileTreeItemWithDepth[]> = computed(() => {
     const flatten = (items: FileTreeItem[], depth = 0): Array<FileTreeItem & { depth: number }> => {
       const result: Array<FileTreeItem & { depth: number }> = []
 

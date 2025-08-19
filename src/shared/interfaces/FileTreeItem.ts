@@ -8,3 +8,5 @@ export interface FileTreeItem {
 }
 
 export type FileTreeConfig = FileTreeItem[]
+
+export type FileTreeItemWithDepth = FileTreeItem & { depth: number }

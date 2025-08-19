@@ -134,7 +134,7 @@ onMounted(() => {
       <!-- Percentage Display -->
       <div class="flex items-center justify-center">
         <div class="text-center">
-          <div class="text-4xl text-accent tabular-nums percentage">{{ percentage }}%</div>
+          <div class="text-4xl text-language tabular-nums percentage">{{ percentage }}%</div>
         </div>
       </div>
     </div>
