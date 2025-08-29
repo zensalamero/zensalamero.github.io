@@ -9,7 +9,6 @@ export const createApp = ViteSSG(
   { routes, base: import.meta.env.BASE_URL },
   async ({ app, router, isClient }) => {
     app.use(router)
-    // Only install createHead once, outside of ViteSSG callback if needed
     app.use(createHead())
 
     // register tsparticles only on client

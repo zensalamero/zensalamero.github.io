@@ -8,7 +8,7 @@ import LayoutWrapper from '@/components/ui/LayoutWrapper.vue'
 import AppNavigation from '@/components/AppNavigation/AppNavigation.vue'
 import LoadingScreen from '@/components/ThemeToggle/LoadingScreen.vue'
 
-const skipLoading = true
+const skipLoading = false
 
 const isLoading = ref(true)
 const showMainApp = ref(false)
