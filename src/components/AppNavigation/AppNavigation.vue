@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { useFileTree } from '@/shared/utils/useFileTree'
 import TabContent from './components/TabContent.vue'
+import { computed } from 'vue'
 
 const { openFiles, activeFile, setActiveFile } = useFileTree()
+
+const files = computed(() => openFiles.value)
 
 const handleTabClick = (path: string, event: MouseEvent) => {
   // Prevent default if clicking close button
@@ -14,23 +17,19 @@ const handleTabClick = (path: string, event: MouseEvent) => {
 </script>
 
 <template>
-  <header
-    v-if="openFiles.length > 0"
-    class="w-full bg-background-50 text-foreground border-b border-background"
-  >
-    <div class="flex items-center justify-between h-12">
+  <header v-if="files.length > 0" class="w-full bg-background-50 text-foreground border-background">
+    <div class="flex items-center justify-between">
       <!-- File Tabs Section -->
       <div class="flex-1 flex items-center overflow-hidden">
         <!-- File Tabs -->
         <div class="flex items-center overflow-x-auto scrollbar-none">
           <div
-            v-for="file in openFiles"
+            v-for="file in files"
             :key="file.path"
             class="flex items-center min-w-0 border-r border-background cursor-pointer transition-colors"
             :class="{
               'bg-background text-foreground': activeFile === file.path,
-              'bg-background-50 text-foreground/70 hover:bg-background hover:text-foreground':
-                activeFile !== file.path,
+              'bg-background-150 text-foreground/70': activeFile !== file.path,
             }"
             @click="handleTabClick(file.path, $event)"
           >

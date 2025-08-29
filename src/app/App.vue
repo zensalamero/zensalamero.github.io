@@ -1,14 +1,28 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
 import { ref, onMounted } from 'vue'
+import { useCurrentView } from '@/shared/utils/useCurrentView'
+import { useFileTree } from '@/shared/utils/useFileTree'
 import MetaManager from '@/components/MetaManager/MetaManager.vue'
 import FileExplorer from '@/components/FileExplorer/FileExplorer.vue'
 import LayoutWrapper from '@/components/ui/LayoutWrapper.vue'
 import AppNavigation from '@/components/AppNavigation/AppNavigation.vue'
 import LoadingScreen from '@/components/ThemeToggle/LoadingScreen.vue'
 
+const skipLoading = true
+
 const isLoading = ref(true)
 const showMainApp = ref(false)
+
+const { activeFile } = useFileTree()
+
+// Use composable to get current view
+const currentView = useCurrentView(activeFile)
+
+if (skipLoading) {
+  // Instantly show main app, skip loading screen
+  isLoading.value = false
+  showMainApp.value = true
+}
 
 onMounted(() => {
   // Start fading out loading screen and showing main app slightly before loading completes
@@ -53,7 +67,7 @@ onMounted(() => {
       <FileExplorer>
         <LayoutWrapper>
           <AppNavigation />
-          <RouterView />
+          <component :is="currentView" />
         </LayoutWrapper>
       </FileExplorer>
     </div>

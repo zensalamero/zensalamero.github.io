@@ -1,5 +1,6 @@
 // src/router/index.ts
 import GettingStarted from '@/views/GettingStarted.vue'
+import AboutView from '@/views/AboutView.vue'
 import type { RouteRecordRaw } from 'vue-router'
 
 export const routes: RouteRecordRaw[] = [
@@ -12,25 +13,25 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/about',
     name: 'about',
-    component: () => import('@views/AboutView.vue'),
+    component: AboutView,
     meta: { title: 'About Janzen', description: 'Frontend engineer, builder, problem-solver.' },
   },
-  {
-    path: '/projects',
-    name: 'projects',
-    component: () => import('@views/AboutView.vue'),
-    meta: { title: 'About Janzen', description: 'Frontend engineer, builder, problem-solver.' },
-  },
-  {
-    path: '/experience',
-    name: 'experience',
-    component: () => import('@views/AboutView.vue'),
-    meta: { title: 'About Janzen', description: 'Frontend engineer, builder, problem-solver.' },
-  },
-  {
-    path: '/tech',
-    name: 'tech',
-    component: () => import('@views/AboutView.vue'),
-    meta: { title: 'About Janzen', description: 'Frontend engineer, builder, problem-solver.' },
-  },
+  // {
+  //   path: '/projects',
+  //   name: 'projects',
+  //   component: () => import('@views/AboutView.vue'),
+  //   meta: { title: 'About Janzen', description: 'Frontend engineer, builder, problem-solver.' },
+  // },
+  // {
+  //   path: '/experience',
+  //   name: 'experience',
+  //   component: () => import('@views/AboutView.vue'),
+  //   meta: { title: 'About Janzen', description: 'Frontend engineer, builder, problem-solver.' },
+  // },
+  // {
+  //   path: '/tech',
+  //   name: 'tech',
+  //   component: () => import('@views/AboutView.vue'),
+  //   meta: { title: 'About Janzen', description: 'Frontend engineer, builder, problem-solver.' },
+  // },
 ]

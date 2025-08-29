@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import ThemeToggle from '../ThemeToggle.vue'
-import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/vue/16/solid'
 import FileItemList from './components/FileItemList.vue'
 
 const explorerRef = ref<HTMLElement>()

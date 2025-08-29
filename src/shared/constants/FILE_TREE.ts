@@ -38,34 +38,34 @@ export const FILE_TREE_CONFIG: FileTreeConfig = [
         path: '/src/navigation',
         children: [
           {
-            name: 'home.ts',
+            name: 'me.ts',
             type: 'file',
-            path: '/src/navigation/home.js',
+            path: '/src/navigation/me.ts',
           },
-          {
-            name: 'about.ts',
-            type: 'file',
-            path: '/src/navigation/home.ts',
-          },
+          // {
+          //   name: 'about.ts',
+          //   type: 'file',
+          //   path: '/src/navigation/about.ts',
+          // },
           {
             name: 'tech.ts',
             type: 'file',
-            path: '/src/navigation/home.ts',
+            path: '/src/navigation/tech.ts',
           },
           {
             name: 'projects.ts',
             type: 'file',
-            path: '/src/navigation/home.ts',
+            path: '/src/navigation/projects.ts',
           },
           {
             name: 'experience.ts',
             type: 'file',
-            path: '/src/navigation/home.ts',
+            path: '/src/navigation/experience.ts',
           },
           {
             name: 'contact.ts',
             type: 'file',
-            path: '/src/navigation/home.ts',
+            path: '/src/navigation/contact.ts',
           },
         ],
       },
