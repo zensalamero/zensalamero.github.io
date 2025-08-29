@@ -1,6 +1,5 @@
 // src/router/index.ts
 import GettingStarted from '@/views/GettingStarted.vue'
-import AboutView from '@/views/AboutView.vue'
 import type { RouteRecordRaw } from 'vue-router'
 
 export const routes: RouteRecordRaw[] = [
@@ -9,12 +8,6 @@ export const routes: RouteRecordRaw[] = [
     name: 'Home',
     component: GettingStarted,
     meta: { title: '~$ whoami → zense', description: 'Frontend engineer portfolio site.' },
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: AboutView,
-    meta: { title: 'About Janzen', description: 'Frontend engineer, builder, problem-solver.' },
   },
   // {
   //   path: '/projects',
